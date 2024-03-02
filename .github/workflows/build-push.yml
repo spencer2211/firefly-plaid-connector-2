@@ -35,7 +35,8 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-        platforms: linux/amd64,linux/arm64
+        with:
+          platforms: linux/amd64,linux/arm64
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
