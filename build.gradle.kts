@@ -46,6 +46,14 @@ dependencies {
     testImplementation("io.ktor:ktor-client-mock-jvm:2.3.8")
 }
 
+buildTypes {
+    debug {
+        ndk {
+            abiFilters "arm64", "amd64"
+        }
+    }
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
