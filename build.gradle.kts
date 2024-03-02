@@ -49,7 +49,7 @@ dependencies {
 buildTypes {
     debug {
         ndk {
-            abiFilters "arm64", "amd64"
+            abiFilters "arm64"; "amd64"
         }
     }
 }
