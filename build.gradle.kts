@@ -49,7 +49,8 @@ dependencies {
 buildTypes {
     debug {
         ndk {
-            abiFilters "arm64"; "amd64"
+            abiFilters []
+              abiFilters.addAll(ABI_FILTERS.split(';').collect{it as String})
         }
     }
 }
